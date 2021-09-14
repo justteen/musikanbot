@@ -1,8 +1,8 @@
 from typing import Dict
 
-from pytgcalls import GroupCall
+from pytgcalls import GroupCallFactory
 
-from VCPlayBot.config import API_HASH, API_ID, SESSION_NAME
+from VCPlayBot.services.callsmusic import client
 from VCPlayBot.services.queues import queues
 
 instances: Dict[int, GroupCall] = {}
