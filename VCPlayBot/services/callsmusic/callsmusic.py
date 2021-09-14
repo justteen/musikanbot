@@ -3,7 +3,7 @@ from typing import Dict
 from pytgcalls import GroupCall
 
 from VCPlayBot.config import API_HASH, API_ID, SESSION_NAME
-from VCPlayBot.services.callsmusic import queues
+from VCPlayBot.services.queues import queues
 
 instances: Dict[int, GroupCall] = {}
 active_chats: Dict[int, Dict[str, bool]] = {}
