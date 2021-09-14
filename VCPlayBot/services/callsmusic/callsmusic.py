@@ -1,4 +1,7 @@
 from typing import Dict
+from pyrogram import Client
+from pytgcalls import PyTgCalls
+from VCPlayBot.config import API_HASH, API_ID, SESSION_NAME
 
 from pytgcalls import GroupCallFactory
 
@@ -7,6 +10,9 @@ from VCPlayBot.services.queues import queues
 
 instances: Dict[int, GroupCallFactory] = {}
 active_chats: Dict[int, Dict[str, bool]] = {}
+
+client = Client(SESSION_NAME, API_ID, API_HASH)
+pytgcalls = PyTgCalls(client)
 
 
 def init_instance(chat_id: int):
