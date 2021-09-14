@@ -21,7 +21,7 @@ async def addchannel(client, message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name =  "RIDWAN MUSIC"
+        user.first_name =  "FM MUSIC"
 
     try:
         await USER.join_chat(invitelink)
@@ -35,7 +35,7 @@ async def addchannel(client, message):
         print(e)
         await message.reply_text(
             f"<b>🛑 Flood Wait Error 🛑 \n User {user.first_name} Asisten musik tidak dapat masuk ke grup! Pastikan Asisten musik tidak dalam blokir grup."
-            "\n\natau manual tambahkan @asistenRidwan ke grup & coba kembali</b>",
+            "\n\natau manual tambahkan @fmsasisten ke grup & coba kembali</b>",
         )
         return
     await message.reply_text(
@@ -95,7 +95,7 @@ async def addcchannel(client, message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name =  "RIDWAN MUSIC"
+        user.first_name =  "FM MUSIC"
 
     try:
         await USER.join_chat(invitelink)
@@ -109,7 +109,7 @@ async def addcchannel(client, message):
         print(e)
         await message.reply_text(
             f"<b>🛑 Flood Wait Error 🛑 \n User {user.first_name} Asisten musik tidak dapat masuk ke channel! Pastikan Asisten musik tidak dalam blokir channel."
-            "\n\natau manual tambahkan @asistenRidwan ke grup & coba kembali</b>",
+            "\n\natau manual tambahkan @fmsasisten ke grup & coba kembali</b>",
         )
         return
     await message.reply_text(
