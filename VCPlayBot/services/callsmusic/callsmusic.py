@@ -1,7 +1,4 @@
 from typing import Dict
-from pyrogram import Client
-from pytgcalls import PyTgCalls
-from VCPlayBot.config import API_HASH, API_ID, SESSION_NAME
 
 from pytgcalls import GroupCallFactory
 
@@ -10,9 +7,6 @@ from VCPlayBot.services.queues import queues
 
 instances: Dict[int, GroupCallFactory] = {}
 active_chats: Dict[int, Dict[str, bool]] = {}
-
-client = Client(SESSION_NAME, API_ID, API_HASH)
-pytgcalls = PyTgCalls(client)
 
 
 def init_instance(chat_id: int):
@@ -107,13 +101,3 @@ async def unmute(chat_id: int) -> int:
     await get_instance(chat_id).set_is_mute(False)
     active_chats[chat_id]["muted"] = False
     return 0
-
-@pytgcalls.on_stream_end()
-def on_stream_end(chat_id: int) -> None:
-    queues.task_done(chat_id)
-
-    if queues.is_empty(chat_id):
-        pytgcalls.leave_group_call(chat_id)
-    else:
-        pytgcalls.change_stream(chat_id, queues.get(chat_id)["file"])
-
