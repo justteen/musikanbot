@@ -8,11 +8,16 @@ import aiohttp
 import ffmpeg
 import requests
 import wget
-from PIL import Image, ImageDraw, ImageFont
-from pyrogram import Client, filters
+from PIL import Image
+from PIL import ImageDraw
+from PIL import ImageFont
+from pyrogram import Client
+from pyrogram import filters
 from pyrogram.types import Voice
 from pyrogram.errors import UserAlreadyParticipant
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
+from pyrogram.types import InlineKeyboardButton
+from pyrogram.types import InlineKeyboardMarkup
+from pyrogram.types import Message
 from Python_ARQ import ARQ
 from youtube_search import YoutubeSearch
 
@@ -27,13 +32,15 @@ from VCPlayBot.helpers.channelmusic import get_chat_id
 from VCPlayBot.helpers.errors import DurationLimitError
 from VCPlayBot.helpers.decorators import errors
 from VCPlayBot.helpers.decorators import authorized_users_only
-from VCPlayBot.helpers.filters import command, other_filters
+from VCPlayBot.helpers.filters import command
+from VCPlayBot.helpers.filters import other_filters
 from VCPlayBot.helpers.gets import get_file_name
 from VCPlayBot.services.callsmusic import callsmusic
-from VCPlayBot.services.queues import queues
-from VCPlayBot.services.callsmusic.callsmusic import client as USER
+from VCPlayBot.services.callsmusic import client as USER
 from VCPlayBot.services.converter.converter import convert
 from VCPlayBot.services.downloaders import youtube
+from VCPlayBot.services.queues import queues
+
 
 aiohttpsession = aiohttp.ClientSession()
 chat_id = None
@@ -484,7 +491,7 @@ async def play(_, message: Message):
                     # print(e)
                     await lel.edit(
             f"<b>🛑 Flood Wait Error 🛑 \n User {user.first_name} Asisten musik tidak dapat masuk ke grup! Pastikan Asisten musik tidak dalam blokir grup."
-            "\n\natau manual tambahkan @asistenRidwan ke grup & coba kembali</b>",
+            "\n\natau manual tambahkan @fmsasisten ke grup & coba kembali</b>",
         )
     try:
         await USER.get_chat(chid)
@@ -760,7 +767,7 @@ async def ytplay(_, message: Message):
                     # print(e)
                     await lel.edit(
             f"<b>🛑 Flood Wait Error 🛑 \n User {user.first_name} Asisten musik tidak dapat masuk ke grup! Pastikan Asisten musik tidak dalam blokir grup."
-            "\n\nOr manual tambahkan @asistenRidwan ke grup & coba kembali</b>",
+            "\n\nOr manual tambahkan @fmsasisten ke grup & coba kembali</b>",
         )
     try:
         await USER.get_chat(chid)
@@ -906,7 +913,7 @@ async def deezer(client: Client, message_: Message):
                     # print(e)
                     await lel.edit(
             f"<b>🛑 Flood Wait Error 🛑 \n User {user.first_name} Asisten musik tidak dapat masuk ke grup! Pastikan Asisten musik tidak dalam blokir grup."
-            "\n\nOr manual tambahkan @asistenRidwan ke grup & coba kembali</b>",
+            "\n\nOr manual tambahkan @fmsasisten ke grup & coba kembali</b>",
         )
     try:
         await USER.get_chat(chid)
@@ -1044,7 +1051,7 @@ async def jiosaavn(client: Client, message_: Message):
                     # print(e)
                     await lel.edit(
             f"<b>🛑 Flood Wait Error 🛑 \n User {user.first_name} Asisten musik tidak dapat masuk ke grup! Pastikan Asisten musik tidak dalam blokir grup."
-            "\n\nOr manual tambahkan @asistenRidwan ke grup & coba kembali</b>",
+            "\n\nOr manual tambahkan @fmsasisten ke grup & coba kembali</b>",
         )
     try:
         await USER.get_chat(chid)
