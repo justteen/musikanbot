@@ -5,13 +5,10 @@ class Messages():
       START_MSG = """
 ❁═════════════════════❁
 HELLO ! [{}](tg://user?id={})!!**
-      🎼 F•S 𝐌𝐔𝐒𝐈𝐂 🎼
+      🎼 🤖 ╣𝐁𝐔𝐙𝐙 𝐌𝐔𝐒𝐈𝐂╠ 🤖 🎼
 Bot untuk memutar musik dalam obrolan suara group chat anda.
 🎧 Jangan lupa untuk menambahkan asisten musik juga, agar dapat memutar musiknya. 🎧
-DESIGN FOR : 
-[FMS](https://https://telegra.ph/file/c3c7fb7c112a49211611c.jpg)
-[✴𝙁𝘼𝙈𝙄𝙇𝙔 𝙎𝙈𝘼𝙍𝙏✴](https://t.me/Familysmartt)
-    
+
     SUPPORT by
 
 BUZZ TEAM [𝐁𝐔𝐙𝐙](https://telegra.ph/file/c5ac64ba0d35133e4411c.jpg)
