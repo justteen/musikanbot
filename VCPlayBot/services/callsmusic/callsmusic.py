@@ -5,6 +5,7 @@ from pytgcalls import GroupCallFactory
 from VCPlayBot.services.callsmusic import client
 from VCPlayBot.services.queues import queues
 
+
 instances: Dict[int, GroupCallFactory] = {}
 active_chats: Dict[int, Dict[str, bool]] = {}
 
